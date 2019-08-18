@@ -1,8 +1,8 @@
-import { remote, RPCClient, RPCServer } from '../node';
+import { Client, remote, Server } from '../';
 const { performance } = require('perf_hooks');
 var Table = require('easy-table')
 
-class TestS extends RPCServer {
+class TestS extends Server {
     @remote
     echo(data: string) {
         return data;
@@ -12,13 +12,6 @@ class TestS extends RPCServer {
 let server = new TestS();
 console.log('listening on :8080...');
 server.listen(8080);
-
-class TestC extends RPCClient {
-    @remote
-    hi(name: string) {
-        return "hi " + name;
-    }
-}
 
 (async () => {
     let data = [
@@ -53,7 +46,7 @@ function benchmark(clients: number, kbs: number, invocations: number) {
     return new Promise((resolve) => {
 
         for (let c = 0; c < clients; c++) {
-            let client = new TestC();
+            let client = new Client();
             client.connect("ws://127.0.0.1:8080").then(async () => {
                 for (let i = 0; i < invocations; i++) {
 

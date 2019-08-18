@@ -41,7 +41,7 @@ class Executable {
 class WSRPC extends Executable {
     callbacks = new Map<string, DeferedPromise>();
 
-    public invoke(ws: WebSocket, method: string, ...params: any[]) {
+    public invoke(ws: WebSocket, method: string, params: any[]) {
         let id = Math.random().toString(36).substring(2) + Date.now().toString(36);
 
         let p = new Promise((resolve, reject) => this.callbacks.set(id, { resolve, reject }));
@@ -70,10 +70,10 @@ class WSRPC extends Executable {
     }
 }
 
-export class RPCServer extends WSRPC {
+export class Server extends WSRPC {
     private wss!: WebSocket.Server;
 
-    public client!: WebSocket;
+    private client!: WebSocket;
 
     public listen(port: number) {
         this.wss = new WebSocket.Server({ port })
@@ -92,8 +92,8 @@ export class RPCServer extends WSRPC {
 }
 
 
-export class RPCClient extends WSRPC {
-    cws!: WebSocket;
+export class Client extends WSRPC {
+    private cws!: WebSocket;
 
     public connect(address: string) {
         return new Promise((resolve, reject) => {
