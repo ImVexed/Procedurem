@@ -58,7 +58,7 @@ class WSRPC extends Executable {
             let req = pmsg as Call;
             ws.send(JSON.stringify(this.execute(instance, req)));
         } else {
-            let rall = JSON.parse(msg.toString()) as CallResponse;
+            let rall = pmsg as CallResponse;
 
             let p = this.callbacks.get(rall.id) as DeferedPromise;
 
