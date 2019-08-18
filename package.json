@@ -25,6 +25,7 @@
   "devDependencies": {
     "easy-table": "^1.1.1",
     "parcel-plugin-bundle-visualiser": "^1.2.0",
+    "procedurem": "^1.0.0",
     "typescript": "^3.5.3"
   }
 }

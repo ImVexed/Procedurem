@@ -1,4 +1,4 @@
-import { Client, remote, Server } from '../';
+import { Client, remote, Server } from 'procedurem';
 
 class DataServer extends Server {
     @remote
