@@ -1,4 +1,4 @@
-import Reflect from '@abraham/reflection';
+import '@abraham/reflection';
 import WebSocket from 'isomorphic-ws';
 
 const METADATA_KEY = 'rpc:methods';
