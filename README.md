@@ -1,5 +1,5 @@
-# Procedurem
-A small (7kb) and performant isomorphic RPC library for TypeScript.
+# Procedurem  ![npm bundle size](https://img.shields.io/bundlephobia/minzip/procedurem) ![npm](https://img.shields.io/npm/v/procedurem)
+A small (2kb) and performant isomorphic RPC library for TypeScript.
 
 # Benchmarks
 AWS T2.Small
