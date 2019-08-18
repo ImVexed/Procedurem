@@ -1,7 +1,20 @@
 {
   "name": "procedurem",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "A Small (7kb) And Performant Type-Safe RPC Library Using WebSockets",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImVexed/Procedurem"
+  },
+  "types": "index.d.ts",
+  "main": "index.ts",
+  "keywords": [
+    "rpc",
+    "websockets",
+    "typescript",
+    "bi-directional"
+  ],
+  "author": "ImVexed",
   "license": "MIT",
   "dependencies": {
     "@abraham/reflection": "^0.5.1",
