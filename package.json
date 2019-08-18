@@ -1,7 +1,7 @@
 {
   "name": "procedurem",
-  "version": "1.0.4",
-  "description": "A Small (7kb) And Performant Type-Safe RPC Library Using WebSockets",
+  "version": "1.0.5",
+  "description": "A Small (2kb) And Performant Type-Safe RPC Library Using WebSockets",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ImVexed/Procedurem"
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "easy-table": "^1.1.1",
-    "procedurem": "^1.0.4",
+    "procedurem": "^1.0.5",
     "@types/ws": "^6.0.2",
     "typescript": "^3.5.3"
   },
