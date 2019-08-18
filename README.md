@@ -1,4 +1,4 @@
-# Procedurem  ![npm bundle size](https://img.shields.io/bundlephobia/minzip/procedurem) ![npm](https://img.shields.io/npm/v/procedurem)
+# Procedurem  ![npm bundle size](https://img.shields.io/bundlephobia/minzip/procedurem) [![npm](https://img.shields.io/npm/v/procedurem)](https://www.npmjs.com/package/procedurem)
 A small (2kb) and performant isomorphic RPC library for TypeScript.
 
 # Benchmarks
