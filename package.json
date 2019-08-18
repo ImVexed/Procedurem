@@ -1,0 +1,17 @@
+{
+  "name": "ts-rpc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@abraham/reflection": "^0.5.1",
+    "@types/ws": "^6.0.2",
+    "isomorphic-ws": "^4.0.1",
+    "ws": "^7.1.2"
+  },
+  "devDependencies": {
+    "easy-table": "^1.1.1",
+    "parcel-plugin-bundle-visualiser": "^1.2.0",
+    "typescript": "^3.5.3"
+  }
+}
