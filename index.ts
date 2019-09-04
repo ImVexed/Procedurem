@@ -15,7 +15,7 @@ interface CallResponse {
     value: any;
 }
 
-interface DeferedPromise {
+interface DeferredPromise {
     resolve: any;
     reject: any;
 }
@@ -39,7 +39,7 @@ class Executable {
 }
 
 class WSRPC extends Executable {
-    callbacks = new Map<string, DeferedPromise>();
+    callbacks = new Map<string, DeferredPromise>();
 
     public invoke(ws: WebSocket, method: string, params: any[]) {
         let id = Math.random().toString(36).substring(2) + Date.now().toString(36);
@@ -60,7 +60,7 @@ class WSRPC extends Executable {
         } else {
             let rall = pmsg as CallResponse;
 
-            let p = this.callbacks.get(rall.id) as DeferedPromise;
+            let p = this.callbacks.get(rall.id) as DeferredPromise;
 
             if (rall.ok) p.resolve(rall.value);
             else p.reject();
